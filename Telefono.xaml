@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenMateoArguello.Telefono">
+
+    <StackLayout Padding="20">
+
+        <Label Text="Ingresar numero telefónico" 
+               FontSize="Medium" />
+
+        <Entry x:Name="GATelefonoEntry" 
+               Placeholder="Número telefónico" 
+               Keyboard="Telephone" />
+
+        <Label Text="Seleccionar Operador" 
+               FontSize="Medium" />
+
+        <HorizontalStackLayout>
+            <Picker x:Name="GASelectionList"
+                    HorizontalOptions="StartAndExpand"
+                    Margin="0,0,20,0">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Claro</x:String>
+                        <x:String>Movistar</x:String>
+                        <x:String>Tuenti</x:String>
+                        <x:String>CNT</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </HorizontalStackLayout>
+
+        <Label Text="Montos" 
+               FontSize="Medium"
+               Margin="0,20,0,10" />
+
+        <StackLayout Orientation="Horizontal"
+                     Spacing="20">
+            <RadioButton x:Name="GARecarga3" 
+                         Content="$3" 
+                         GroupName="Recarga"
+                         CheckedChanged="OnRecargaCheckedChanged"/>
+            <RadioButton x:Name="GARecarga5" 
+                         Content="$5" 
+                         GroupName="Recarga"
+                         CheckedChanged="OnRecargaCheckedChanged"/>
+            <RadioButton x:Name="GARecarga10" 
+                         Content="$10" 
+                         GroupName="Recarga"
+                         CheckedChanged="OnRecargaCheckedChanged"/>
+        </StackLayout>
+
+        <Label x:Name="GAMensajeRecarga" 
+               FontSize="Medium" 
+               TextColor="White"
+               HorizontalTextAlignment="Center"/>
+
+        <Button x:Name="GABotonRecarga"
+                Text="Recargar" 
+                Clicked="RecargarClicked" />
+
+    </StackLayout>
+
+</ContentPage>
