@@ -31,11 +31,11 @@
 
         </HorizontalStackLayout>
 
-        <Label Text="Montos" 
+        <Label Text="Seleccione el valor de la recarga:" 
                FontSize="Medium"
                Margin="0,20,0,10" />
 
-        <StackLayout Orientation="Horizontal"
+        <StackLayout Orientation="Vertical"
                      Spacing="20">
             <RadioButton x:Name="GARecarga3" 
                          Content="$3" 
